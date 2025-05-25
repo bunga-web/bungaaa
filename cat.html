@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Cat Gallery</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      font-family: sans-serif;
+      background: linear-gradient(to right, #ffe9f0, #ffe2ec);
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #893b5c;
+      margin-bottom: 60px;
+    }
+
+    h2 a {
+  text-decoration: none;
+  color: #893b5c;
+  background-color: #ffd7e4; /* latar belakang pink lembut */
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* bayangan halus */
+  transition: background-color 0.3s ease;
+}
+
+h2 a:hover {
+  background-color: #ffc3d7; /* saat di-hover jadi lebih terang */
+}
+
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .image-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      cursor: pointer;
+      height: 200px;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .image-container::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0); /* awalnya transparan */
+      transition: background 0.4s ease;
+    }
+
+    .image-container:hover::after {
+      background: rgba(0, 0, 0, 0.4); /* efek gelap saat hover */
+    }
+
+    .image-container:hover img {
+      transform: scale(1.1);
+    }
+
+    .image-title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      text-align: center;
+      white-space: nowrap;
+      z-index: 2;
+    }
+
+    .image-container:hover .image-title {
+      opacity: 1;
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 1.1rem;
+    }
+
+    .back-link a {
+      color: #893b5c;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.2s;
+    }
+
+    .back-link a:hover {
+      color: #c6577b;
+    }
+  </style>
+</head>
+<body>
+
+    <h2>
+        <a href="tes.html#favorites" style="text-decoration: none; color: #893b5c;">
+          CAT GALLERY
+        </a>
+      </h2>
+      
+
+  <div class="gallery">
+    <div class="image-container">
+      <img src="c:\Users\HP\OneDrive\Pictures\Saved Pictures\WhatsApp Image 2025-05-08 at 09.03.56_13683ce4.jpg" alt="Anime 1">
+      <div class="image-title">Tiger</div>
+    </div>
+    <div class="image-container">
+      <img src="c:\Users\HP\OneDrive\Pictures\Saved Pictures\WhatsApp Image 2025-05-08 at 09.01.50_57a312d0.jpg" alt="Anime 2">
+      <div class="image-title">Cimot</div>
+    </div>
+    <div class="image-container">
+      <img src="c:\Users\HP\OneDrive\Pictures\Saved Pictures\WhatsApp Image 2025-05-08 at 09.15.10_097b7f7e.jpg" alt="Anime 3">
+      <div class="image-title">Anime 3</div>
+    </div>
+    <div class="image-container">
+      <img src="c:\Users\HP\OneDrive\Pictures\Saved Pictures\WhatsApp Image 2025-05-08 at 09.14.22_eb57627f.jpg" alt="Anime 4">
+      <div class="image-title">Moka</div>
+    </div>
+    <div class="image-container">
+      <img src="c:\Users\HP\OneDrive\Pictures\Saved Pictures\WhatsApp Image 2025-05-08 at 09.13.05_8dcf4cf8.jpg" alt="Anime 5">
+      <div class="image-title">Oyen</div>
+    </div>
+    <div class="image-container">
+      <img src="c:\Users\HP\OneDrive\Pictures\Saved Pictures\WhatsApp Image 2025-05-23 at 19.02.51_ebc7b3a6.jpg" alt="Anime 6">
+      <div class="image-title">Oyenn</div>
+    </div>
+    <div class="image-container">
+      <img src="c:\Users\HP\OneDrive\Pictures\Saved Pictures\WhatsApp Image 2025-05-08 at 09.16.52_61da5095.jpg" alt="Anime 7">
+      <div class="image-title">Mimi</div>
+    </div>
+    <div class="image-container">
+      <img src="c:\Users\HP\OneDrive\Pictures\Saved Pictures\WhatsApp Image 2025-05-08 at 08.59.44_fd565695.jpg" alt="Anime 8">
+      <div class="image-title">Oyennn</div>
+    </div>
+  </div>
+
+</body>
+</html>

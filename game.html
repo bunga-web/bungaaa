@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Game Gallery</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      font-family: sans-serif;
+      background: linear-gradient(to right, #ffe9f0, #ffe2ec);
+    }
+
+    h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #893b5c;
+  margin-bottom: 60px; /* Tambah jarak antara judul & gambar pertama */
+}
+    h2 a {
+      text-decoration: none;
+      color: #893b5c;
+      background-color: #ffd7e4;
+      padding: 10px 20px;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease;
+    }
+
+    h2 a:hover {
+      background-color: #ffc3d7;
+    }
+
+    .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px; /* Lebih rapat dari sebelumnya */
+  max-width: 1200px;
+  margin: 0 auto 10px auto; /* Jarak antar galeri */
+}
+
+
+    .image-container {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .image-wrapper {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+    }
+
+    .image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+      display: block;
+    }
+
+    .image-wrapper::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0);
+      transition: background 0.4s ease;
+      z-index: 1;
+    }
+
+    .image-wrapper:hover::after {
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .image-wrapper:hover img {
+      transform: scale(1.05);
+    }
+
+    .hover-caption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-align: center;
+      z-index: 2;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+    }
+
+    .image-wrapper:hover .hover-caption {
+      opacity: 1;
+    }
+
+    .caption {
+      padding: 12px;
+      font-size: 1rem;
+      color: #893b5c;
+      font-weight: bold;
+      text-align: center;
+      background-color: white;
+    }
+
+    .section-space {
+      height: 30px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h2>
+    <a href="tes.html#favorites">GAME GALLERY</a>
+  </h2>
+
+  <div class="gallery">
+    <div class="image-container">
+      <div class="image-wrapper">
+        <img src="c:\Users\HP\OneDrive\Pictures\game\da.jpg" alt="Roblox 1">
+        <div class="hover-caption">Alumni Antartika</div>
+      </div>
+      <div class="caption">Roblox : Antartika</div>
+    </div>
+    <div class="image-container">
+      <div class="image-wrapper">
+        <img src="c:\Users\HP\OneDrive\Pictures\game\vubx.png" alt="Roblox 2">
+        <div class="hover-caption">Solo Merapi</div>
+      </div>
+      <div class="caption">Roblox</div>
+    </div>
+    <div class="image-container">
+      <div class="image-wrapper">
+        <img src="c:\Users\HP\OneDrive\Pictures\game\ih.png" alt="Roblox 3">
+        <div class="hover-caption">Carry Tim</div>
+      </div>
+      <div class="caption">Roblox</div>
+    </div>
+  </div>
+
+  <div class="section-space"></div>
+
+  <div class="gallery">
+    <div class="image-container">
+      <div class="image-wrapper">
+        <img src="c:\Users\HP\OneDrive\Pictures\game\Untitled Projectl.jpg" alt="ML 1">
+        <div class="hover-caption">Mantan Imo</div>
+      </div>
+      <div class="caption">MLBB</div>
+    </div>
+    <div class="image-container">
+      <div class="image-wrapper">
+        <img src="c:\Users\HP\OneDrive\Pictures\ii.jpg" alt="ML 2">
+        <div class="hover-caption">All Role</div>
+      </div>
+      <div class="caption">MLBB</div>
+    </div>
+    <div class="image-container">
+      <div class="image-wrapper">
+        <img src="c:\Users\HP\OneDrive\Pictures\game\de.jpg" alt="ML 3">
+        <div class="hover-caption">Top Global</div>
+      </div>
+      <div class="caption">MLBB</div>
+    </div>
+  </div>
+
+</body>
+</html>
+
+

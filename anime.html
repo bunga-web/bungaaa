@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Cat Gallery</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      font-family: sans-serif;
+      background: linear-gradient(to right, #ffe9f0, #ffe2ec);
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #893b5c;
+      margin-bottom: 60px;
+    }
+
+    h2 a {
+  text-decoration: none;
+  color: #893b5c;
+  background-color: #ffd7e4; /* latar belakang pink lembut */
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* bayangan halus */
+  transition: background-color 0.3s ease;
+}
+
+h2 a:hover {
+  background-color: #ffc3d7; /* saat di-hover jadi lebih terang */
+}
+
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .image-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+      display: block;
+    }
+
+    .image-container:hover img {
+      transform: scale(1.05);
+    }
+
+    .image-title {
+      display: none;
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 1.1rem;
+    }
+
+    .back-link a {
+      color: #893b5c;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.2s;
+    }
+
+    .back-link a:hover {
+      color: #c6577b;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>
+    <a href="tes.html#favorites" style="text-decoration: none; color: #893b5c;">
+      TOP ANIME
+    </a>
+  </h2>
+
+  <div class="gallery">
+    <div class="image-container">
+      <img src="c:\Users\HP\OneDrive\Pictures\Screenshots\downloadd.jpeg" alt="Tiger">
+      <div class="image-title">Tiger</div>
+    </div>
+    <div class="image-container">
+      <img src="c:\Users\HP\OneDrive\Pictures\Screenshots\bf4ab0a0-d6ef-4888-80ca-3df73280ffed.jpeg" alt="Cimot">
+      <div class="image-title">Cimot</div>
+    </div>
+    <div class="image-container">
+      <img src="c:\Users\HP\OneDrive\Pictures\Screenshots\851f8635-5c01-4154-8816-c6316edff980.jpeg" alt="Anime 3">
+      <div class="image-title">Anime 3</div>
+    </div>
+    <div class="image-container">
+      <img src="c:\Users\HP\OneDrive\Pictures\Screenshots\One Piece Poster.jpeg" alt="Moka">
+      <div class="image-title">Moka</div>
+    </div>
+    <div class="image-container">
+      <img src="c:\Users\HP\OneDrive\Pictures\Screenshots\2ecd523c-2722-4c67-8919-1bccb13fc5d2.jpeg" alt="Oyen">
+      <div class="image-title">Oyen</div>
+    </div>
+    <div class="image-container">
+      <img src="c:\Users\HP\OneDrive\Pictures\Screenshots\82095c9a-dc60-46ac-8da7-d369fd56285a.jpeg" alt="Oyenn">
+      <div class="image-title">Oyenn</div>
+    </div>
+    <div class="image-container">
+      <img src="c:\Users\HP\OneDrive\Pictures\Screenshots\gbg.jpeg" alt="Mimi">
+      <div class="image-title">Mimi</div>
+    </div>
+    <div class="image-container">
+      <img src="c:\Users\HP\OneDrive\Pictures\Screenshots\downloadlyiuy.jpeg" alt="Oyennn">
+      <div class="image-title">Oyennn</div>
+    </div>
+
+    <!-- Tambahan 8 gambar -->
+    <div class="image-container">
+      <img src="c:\Users\HP\OneDrive\Pictures\Screenshots\2a53350b-5c1a-43e3-8c6a-5ce1cc978fd4.jpeg" alt="Lulu">
+      <div class="image-title">Lulu</div>
+    </div>
+    <div class="image-container">
+      <img src="c:\Users\HP\OneDrive\Pictures\Screenshots\4a6099e6-a638-4b0d-a387-cb94539f0945.jpeg" alt="Neko">
+      <div class="image-title">Neko</div>
+    </div>
+    <div class="image-container">
+      <img src="c:\Users\HP\OneDrive\Pictures\Screenshots\75d69503-8658-446a-a584-45b73ce92706.jpeg" alt="Bubu">
+      <div class="image-title">Bubu</div>
+    </div>
+    <div class="image-container">
+      <img src="c:\Users\HP\OneDrive\Pictures\Screenshots\6afe08ba-e15e-4366-bb37-50625c2f4824.jpeg" alt="Snowy">
+      <div class="image-title">Snowy</div>
+    </div>
+    <div class="image-container">
+      <img src="c:\Users\HP\OneDrive\Pictures\Screenshots\gr.jpeg" alt="Lili">
+      <div class="image-title">Lili</div>
+    </div>
+    <div class="image-container">
+      <img src="c:\Users\HP\OneDrive\Pictures\Screenshots\e8ccf9e9-568f-487f-aeba-091689dfc910.jpeg" alt="Garfield">
+      <div class="image-title">Garfield</div>
+    </div>
+    <div class="image-container">
+      <img src="c:\Users\HP\OneDrive\Pictures\Screenshots\e4fe3f22-33e3-4565-9ba4-fc53ac660d47.jpeg" alt="Luna">
+      <div class="image-title">Luna</div>
+    </div>
+    <div class="image-container">
+      <img src="c:\Users\HP\OneDrive\Pictures\Screenshots\windbreaker anime poster.jpeg" alt="Jojo">
+      <div class="image-title">Jojo</div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bunga Sabila A.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #ffe9f0, #ffe2ec);
+      color: #3a2d2d;
+      overflow-x: hidden;
+    }
+
+    nav {
+      background-color: #fdd3e5;
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      z-index: 1000;
+    }
+
+    .nav-left {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #893b5c;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #893b5c;
+      font-weight: 600;
+      font-size: 1.05rem;
+      padding: 8px 16px;
+      border-radius: 12px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      cursor: pointer;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background-color: #ffb7d1;
+      color: #fff;
+    }
+    #skills,
+#favorites,
+#home {
+  scroll-margin-top: 10px;
+}
+
+
+    /* Setiap section full layar */
+    section {
+      height: 100vh;
+      padding: 6rem 2rem 2rem; /* top padding utk nav fixed */
+      scroll-margin-top: 80px; /* supaya scroll gak tertutup nav */
+      max-width: 2000px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* Section judul */
+    section h2 {
+      font-size: 3rem;
+      color: #893b5c;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    /* Home section styling */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 4rem;
+      
+    }
+
+    .container img.profile {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid #ffcfe0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .container img.profile:hover {
+      transform: scale(1.05);
+    }
+
+    .intro-text {
+      max-width: 500px;
+    }
+
+    .intro-text h1 {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: #893b5c;
+      font-weight: 600;
+    }
+
+    .intro-text p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #6a4e3f;
+    }
+
+    /* Skills section */
+    .skills-section {
+        background: linear-gradient(to right, #ffe9f0, #ffe2ec);
+      text-align: center;
+      padding: 3rem 1.5rem;
+  margin-bottom: 3rem;
+  background-color: white; /* optional, supaya ada kontras */
+  border-radius: 12px; /* biar agak rounded */
+    }
+    .skills-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .skill-card {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      max-width: 300px;
+      flex: 1;
+      transition: transform 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: scale(1.03);
+    }
+
+    .skill-card .icon {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .skill-card h3 {
+      color: #893b5c;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+
+    .skill-card p {
+      font-size: 1rem;
+      color: #6a4e3f;
+      line-height: 1.6;
+    }
+
+    /* Favorites section */
+    .skills-section {
+      background: linear-gradient(to right, #ffe9f0, #ffe2ec);
+      text-align: center;
+      padding: 3rem 1.5rem;
+  margin-bottom: 3rem;
+  background-color: white; /* optional, supaya ada kontras */
+  border-radius: 12px; /* biar agak rounded */
+ 
+    }
+    .favorites-section h2 {
+      text-align: center;
+      font-size: 3rem;
+      color: #893b5c;
+      margin-bottom: 60px;
+    }
+    .favorites-gallery {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .favorite-item {
+      text-align: center;
+      max-width: 300px;
+      flex: 1 1 150px;
+    }
+
+    .favorite-item img {
+      width: 100%;
+      border-radius: 20px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      border: 6px solid #ffcfe0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      object-fit: cover;
+      height: 300px;
+    }
+
+    .favorite-item img:hover {
+      transform: scale(1.05);
+    }
+
+    .favorite-item p {
+      margin-top: 15px;
+      font-weight: 600;
+      color: #893b5c;
+      font-size: 1.5rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .intro-text h1 {
+        font-size: 2rem;
+      }
+
+      .skills-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .skill-card {
+        width: 90%;
+      }
+
+      .favorite-item {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <audio id="audio" src="c:\\Users\\HP\\Music\\glue song.mp3"></audio>
+
+  <nav>
+    <div class="nav-left">Welcome</div>
+    <div class="nav-links">
+      <a href="#home" class="nav-link" id="nav-home">Beranda</a>
+      <a href="#skills" class="nav-link" id="nav-skills">Keahlian</a>
+      <a href="#favorites" class="nav-link" id="nav-favorites">Favorit</a>
+    </div>
+  </nav>
+
+  <section id="home">
+    <div class="container">
+      <img src="c:\\Users\\HP\\OneDrive\\Pictures\\Bunga's\\WhatsApp Image 2025-05-13 at 20.08.59_7c57be55.jpg" alt="Foto Bunga" class="profile" onclick="toggleAudio()" />
+      <div class="intro-text">
+        <h1>Hai! Aku Bunga Sabila Agustian</h1>
+        <p>Selamat datang di webku! Aku siswa jurusan TKJ yang senang belajar teknologi dan berbagi cerita tentang keseharian serta hal-hal yang aku suka. Yuk kenalan lebih jauh!</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="skills-section">
+    <h2>Keahlian</h2>
+    <div class="skills-cards">
+      <div class="skill-card">
+        <div class="icon">🛠️</div>
+        <h3>Jaringan Komputer</h3>
+        <p>Crimping kabel, fiber optik, dan setting IP address agar komputer bisa saling terhubung.</p>
+      </div>
+      <div class="skill-card">
+        <div class="icon">🌐</div>
+        <h3>Pengaturan Internet</h3>
+        <p>Setting router, membuat voucher internet, dan routing static untuk jaringan lokal.</p>
+      </div>
+      <div class="skill-card">
+        <div class="icon">💻</div>
+        <h3>Software & Web</h3>
+        <p>Menggunakan Word & Excel, install Debian 10 di VirtualBox, dan membuat web sederhana.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="favorites" class="favorites-section">
+    <h2>Favoritku</h2>
+    <div class="favorites-gallery">
+      <div class="favorite-item">
+        <a href="anime.html">
+          <img src="c:/Users/HP/OneDrive/Pictures/Screenshots/85e2a97e-cd41-4dd5-871b-07c0b631c240.jpeg" alt="Anime" />
+        </a>
+        <p>Anime</p>
+      </div>
+
+      <div class="favorite-item">
+        <a href="cat.html">
+          <img src="c:/Users/HP/OneDrive/Pictures/Screenshots/b3b49a26-30b5-4001-a8da-c5d5e8b51ec6.jpeg" alt="Cat" />
+        </a>
+        <p>Cat</p>
+      </div>
+
+      <div class="favorite-item">
+        <a href="game.html">
+          <img src="c:/Users/HP/OneDrive/Pictures/Screenshots/hih - Pngtree.jpeg" alt="Game" />
+        </a>
+        <p>Game</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const audio = document.getElementById('audio');
+    let isPlaying = false;
+
+    function toggleAudio() {
+      if (!isPlaying) {
+        audio.play();
+        isPlaying = true;
+      } else {
+        audio.pause();
+        isPlaying = false;
+      }
+    }
+
+    audio.addEventListener('ended', () => {
+      if (isPlaying) {
+        audio.currentTime = 0;
+        audio.play();
+      }
+    });
+
+    // Navbar highlight based on scroll
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 120;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${current}`) {
+          link.classList.add("active");
+        }
+      });
+    });
+
+  </script>
+
+</body>
+</html>
+
+  
